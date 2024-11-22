@@ -1,4 +1,4 @@
-# `package-name`
+# `astro-typed-ids`
 
 This is an [Astro integration](https://docs.astro.build/en/guides/integrations-guide/) to get typeds ids for Content Layer entries, matching Astro 4 behavior.
 
@@ -13,15 +13,15 @@ TODO:
 Install the integration **automatically** using the Astro CLI:
 
 ```bash
-pnpm astro add package-name
+pnpm astro add astro-typed-ids
 ```
 
 ```bash
-npx astro add package-name
+npx astro add astro-typed-ids
 ```
 
 ```bash
-yarn astro add package-name
+yarn astro add astro-typed-ids
 ```
 
 Or install it **manually**:
@@ -29,21 +29,21 @@ Or install it **manually**:
 1. Install the required dependencies
 
 ```bash
-pnpm add package-name
+pnpm add astro-typed-ids
 ```
 
 ```bash
-npm install package-name
+npm install astro-typed-ids
 ```
 
 ```bash
-yarn add package-name
+yarn add astro-typed-ids
 ```
 
 2. Add the integration to your astro config
 
 ```diff
-+import integration from "package-name";
++import integration from "astro-typed-ids";
 
 export default defineConfig({
   integrations: [

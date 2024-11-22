@@ -1,4 +1,4 @@
-# package-name
+# astro-typed-ids
 
 Get typeds ids for Content Layer entries, matching Astro 4 behavior.
 

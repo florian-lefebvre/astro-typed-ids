@@ -1,6 +1,6 @@
 # `package-name`
 
-This is an [Astro integration](https://docs.astro.build/en/guides/integrations-guide/) that TODO:description
+This is an [Astro integration](https://docs.astro.build/en/guides/integrations-guide/) to get typeds ids for Content Layer entries, matching Astro 4 behavior.
 
 ## Usage
 
@@ -79,8 +79,4 @@ You can now edit files in `package`. Please note that making changes to those fi
 
 ## Licensing
 
-[MIT Licensed](https://github.com/TODO:/blob/main/LICENSE). Made with ❤️ by [TODO:](https://github.com/TODO:).
-
-## Acknowledgements
-
-TODO:
+[MIT Licensed](https://github.com/florian-lefebvre/astro-typed-ids/blob/main/LICENSE). Made with ❤️ by [Florian Lefebvre](https://github.com/florian-lefebvre).

@@ -1,11 +1,11 @@
 {
 	"name": "package-name",
 	"version": "0.0.0",
-	"description": "TODO:",
+	"description": "An Astro integration to get typeds ids for Content Layer entries, matching Astro 4 behavior.",
 	"author": {
-		"email": "TODO:",
-		"name": "TODO:",
-		"url": "TODO:"
+		"email": "contact@florian-lefebvre.dev",
+		"name": "Florian Lefebvre",
+		"url": "https://florian-lefebvre.dev"
 	},
 	"license": "MIT",
 	"keywords": [
@@ -13,9 +13,9 @@
 		"astro-component",
 		"withastro",
 		"astro",
-		"TODO:"
+		"utility"
 	],
-	"homepage": "TODO:",
+	"homepage": "https://github.com/florian-lefebvre/astro-typed-ids",
 	"publishConfig": {
 		"access": "public"
 	},

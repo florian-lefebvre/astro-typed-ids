@@ -30,6 +30,12 @@ const createUtils = ({
         ? new URL("./.astro/data-store.json", config.root)
         : new URL("./data-store.json", config.cacheDir);
       dtsURL = dts;
+
+      if (config.legacy.collections) {
+        logger.warn(
+          "Legacy collections are enabled, this integration is not needed"
+        );
+      }
     },
     updateStore: async () => {
       store = await MutableDataStore.fromFile(dataStoreURL);

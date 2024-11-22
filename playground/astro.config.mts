@@ -9,7 +9,7 @@ const { default: typedIds } = await import("astro-typed-ids");
 export default defineConfig({
   integrations: [
     tailwind(),
-    typedIds(),
+    typedIds({ collections: ["blog"] }),
     hmrIntegration({
       directory: createResolver(import.meta.url).resolve("../package/dist"),
     }),

@@ -7,11 +7,11 @@ const { default: typedIds } = await import("astro-typed-ids");
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind(),
-    typedIds({ collections: ["blog"] }),
-    hmrIntegration({
-      directory: createResolver(import.meta.url).resolve("../package/dist"),
-    }),
-  ],
+	integrations: [
+		tailwind(),
+		typedIds({ collections: ["blog"] }),
+		hmrIntegration({
+			directory: createResolver(import.meta.url).resolve("../package/dist"),
+		}),
+	],
 });

@@ -1,13 +1,13 @@
 ---
 import { getCollection } from "astro:content";
+import type { CollectionId } from "astro:content";
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
-import type { CollectionId } from "astro:content";
 
 const entries = await getCollection("blog");
 console.log(entries);
 
-type X = CollectionId<"blog">
+type X = CollectionId<"blog">;
 ---
 
 <Layout title="Welcome to Astro.">

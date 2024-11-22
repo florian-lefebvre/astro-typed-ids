@@ -27,8 +27,8 @@ import {
 } from "astro:content"
 
 interface Props {
--  id: CollectionEntry<"blog">["slug"]
-+  id: CollectionId<"blog">
+-  id: CollectionEntry<"blog">["slug"] // string
++  id: CollectionId<"blog"> // "foo" | "bar" | "..."
 }
 ```
 

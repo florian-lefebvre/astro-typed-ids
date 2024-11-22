@@ -8,8 +8,11 @@ import { MutableDataStore } from "../node_modules/astro/dist/content/mutable-dat
 import { writeFileSync } from "node:fs";
 
 interface Options {
+  /** An array of `astro:content` collection names */
   collections: Array<import("astro:content").DataCollectionKey>;
 }
+
+const MAX = 200;
 
 const createUtils = ({
   logger,
@@ -51,9 +54,9 @@ const createUtils = ({
         if (collection) {
           const keys = Array.from(collection.keys());
           obj[id] = keys;
-          if (keys.length > 200) {
+          if (keys.length > MAX) {
             logger.warn(
-              `Collection "${id}" has more than 200 entries. The integration is supposed to be used for manual usages, it could affect performance`
+              `Collection "${id}" has more than ${MAX} entries. The integration is supposed to be used for manual usages, it could affect performance`
             );
           }
         } else {

@@ -2,11 +2,42 @@
 
 This is an [Astro integration](https://docs.astro.build/en/guides/integrations-guide/) to get typeds ids for Content Layer entries, matching Astro 4 behavior.
 
+## Background
+
+In Astro 4, ids/slugs of content entries where stricter by default. While it's convenient for manual usages, it impacted performance on bigger collections. So the team decided to make the types a bit more loose, ids now are typed as `string`.
+
+To make transitioning to the Content Layer easier, or if you want this behavior for some more manual usage (please use it on small datasets only!), this integration is for you.
+
+## Migrating from legacy Content Collections
+
+```diff
+// astro.config.mjs
++import typedIds from "astro-typed-ids"
+
+export default defineConfig({
+  integrations: [
++    typedIds({ collections: ["blog"] }),
+  ],
+})
+
+// some file
+import {
+-  CollectionEntry
++  CollectionId
+} from "astro:content"
+
+interface Props {
+-  id: CollectionEntry<"blog">["slug"]
++  id: CollectionId<"blog">
+}
+```
+
 ## Usage
 
 ### Prerequisites
 
-TODO:
+- Astro `>= 5.0.0-beta.10`
+- You must be using the Content Layer (ie. not having the `legacy.collections` flag enabled, nor having collections defined without a `loader`)
 
 ### Installation
 
@@ -43,18 +74,18 @@ yarn add astro-typed-ids
 2. Add the integration to your astro config
 
 ```diff
-+import integration from "astro-typed-ids";
++import typedIds from "astro-typed-ids";
 
 export default defineConfig({
   integrations: [
-+    integration(),
++    typedIds(),
   ],
 });
 ```
 
 ### Configuration
 
-TODO:configuration
+The integration has one required `collections` options. It accepts an array of collections names.
 
 ## Contributing
 

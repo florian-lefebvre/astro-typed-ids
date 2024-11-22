@@ -4,10 +4,10 @@
 - [x] Update all `package-name` occurences
 - [x] Add a LICENSE.md at the root
 - [x] Have gh cli installed
-- [ ] Work on the integration logic
-- [ ] Work on docs
-  - [ ] JSDoc
-  - [ ] Package README
+- [x] Work on the integration logic
+- [x] Work on docs
+  - [x] JSDoc
+  - [x] Package README
 - [ ] Format/lint (`pnpm lint:fix`)
 - [ ] Setup GitHub repository
 - [ ] Release (see below)

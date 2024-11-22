@@ -14,53 +14,61 @@ interface Options {
 export default function integration({
   collections,
 }: Options): AstroIntegration {
-  let root: URL;
+  let dataStoreURL: URL;
+  let isDev: boolean;
   let store: MutableDataStore;
   let dtsURL: URL;
 
-  const getDataStoreURL = () => new URL("./.astro/data-store.json", root);
-
   const loadStore = async () => {
-    store = await MutableDataStore.fromFile(getDataStoreURL());
+    store = await MutableDataStore.fromFile(dataStoreURL);
   };
 
-  const syncTypes = () => {
+  const getDtsContent = (): string => {
     const obj: Record<string, Array<string>> = {};
 
     for (const id of collections) {
       obj[id] = [...(store.collections().get(id)?.keys() ?? [])];
     }
 
-    writeFileSync(
-      dtsURL,
-      `declare module 'astro:content' {
+    return `declare module 'astro:content' {
   type _Collections = ${JSON.stringify(obj)};
   export type CollectionId<T extends keyof _Collections> = _Collections[T][number];
-}`,
-      "utf-8"
-    );
+}`;
+  };
+
+  const syncTypes = () => {
+    writeFileSync(dtsURL, getDtsContent(), "utf-8");
   };
 
   return {
     name,
     hooks: {
-      "astro:config:setup": async (params) => {
-        root = params.config.root;
-        await loadStore();
+      "astro:config:setup": (params) => {
+        isDev = params.command === "dev";
       },
-      "astro:config:done": (params) => {
-        dtsURL = params.injectTypes({ filename: "types.d.ts", content: "" });
+      "astro:config:done": async (params) => {
+        dataStoreURL = isDev
+          ? new URL("./.astro/data-store.json", params.config.root)
+          : new URL("./data-store.json", params.config.cacheDir);
+        await loadStore();
+        // In sync, it will always have an outdated type because the data store is updated
+        // later than this hook
+        dtsURL = params.injectTypes({
+          filename: "types.d.ts",
+          content: getDtsContent(),
+        });
       },
       "astro:server:setup": ({ server }) => {
         syncTypes();
         server.watcher.on("all", async (eventName, path) => {
           if (!["change"].includes(eventName)) return;
-          if (path === getDataStoreURL().pathname) {
+          if (path === dataStoreURL.pathname) {
             await loadStore();
             syncTypes();
           }
         });
       },
+      // We don't need to do anything in build
     },
   };
 }

@@ -1,6 +1,6 @@
 # astro-typed-ids
 
-Get typeds ids for Content Layer entries, matching Astro 4 behavior.
+Get typed ids for Content Layer entries, matching Astro 4 behavior.
 
 To see how to get started, check out the [package README](./package/README.md)
 

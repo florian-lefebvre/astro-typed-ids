@@ -1,6 +1,6 @@
 # `astro-typed-ids`
 
-This is an [Astro integration](https://docs.astro.build/en/guides/integrations-guide/) to get typeds ids for Content Layer entries, matching Astro 4 behavior.
+This is an [Astro integration](https://docs.astro.build/en/guides/integrations-guide/) to get typed ids for Content Layer entries, matching Astro 4 behavior.
 
 ## Background
 

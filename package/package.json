@@ -1,7 +1,7 @@
 {
 	"name": "astro-typed-ids",
 	"version": "0.1.0",
-	"description": "An Astro integration to get typeds ids for Content Layer entries, matching Astro 4 behavior.",
+	"description": "An Astro integration to get typed ids for Content Layer entries, matching Astro 4 behavior.",
 	"author": {
 		"email": "contact@florian-lefebvre.dev",
 		"name": "Florian Lefebvre",

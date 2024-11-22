@@ -57,6 +57,7 @@ const createUtils = ({
             );
           }
         } else {
+          obj[id] = [];
           logger.warn(`Collection "${id}" does not exist`);
         }
       }

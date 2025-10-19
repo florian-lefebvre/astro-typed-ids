@@ -1,5 +1,11 @@
 # astro-typed-ids
 
+## 0.1.3
+
+### Patch Changes
+
+- [#5](https://github.com/florian-lefebvre/astro-typed-ids/pull/5) [`52564d6`](https://github.com/florian-lefebvre/astro-typed-ids/commit/52564d607e1f4c7f29429439c69997ad01a2c3b6) Thanks [@florian-lefebvre](https://github.com/florian-lefebvre)! - Fixes publishing
+
 ## 0.1.2
 
 ### Patch Changes

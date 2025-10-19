@@ -18,7 +18,7 @@ importers:
         specifier: ^2.27.9
         version: 2.27.9
 
-  package:
+  packages/astro-typed-ids:
     dependencies:
       astro:
         specifier: ^5.0.0-beta.10
@@ -44,7 +44,7 @@ importers:
         version: 0.17.0(astro@5.0.0-beta.10(@types/node@22.9.0)(jiti@1.21.6)(rollup@4.27.2)(typescript@5.6.3)(yaml@2.6.0))
       astro-typed-ids:
         specifier: workspace:*
-        version: link:../package
+        version: link:../packages/astro-typed-ids
       tailwindcss:
         specifier: ^3.4.15
         version: 3.4.15

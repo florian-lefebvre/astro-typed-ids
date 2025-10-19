@@ -15,7 +15,8 @@
 	],
 	"scripts": {
 		"dev": "tsup --watch",
-		"build": "tsup"
+		"build": "tsup",
+		"prepublishOnly": "pnpm build"
 	},
 	"keywords": [
 		"astro-integration",

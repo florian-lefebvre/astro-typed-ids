@@ -13,7 +13,8 @@
 		"lint": "biome check .",
 		"lint:fix": "biome check --write .",
 		"ci-version": "changeset version && pnpm install --no-frozen-lockfile",
-		"ci-publish": "changeset publish"
+		"ci-publish": "changeset publish",
+		"prepublishOnly": "pnpm --filter astro-typed-ids build"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.2.6",

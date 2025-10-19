@@ -2,23 +2,7 @@
 	"name": "astro-typed-ids",
 	"version": "0.1.2",
 	"description": "An Astro integration to get typed ids for Content Layer entries, matching Astro 4 behavior.",
-	"author": {
-		"email": "contact@florian-lefebvre.dev",
-		"name": "Florian Lefebvre",
-		"url": "https://florian-lefebvre.dev"
-	},
-	"license": "MIT",
-	"keywords": [
-		"astro-integration",
-		"astro-component",
-		"withastro",
-		"astro",
-		"utility"
-	],
-	"homepage": "https://github.com/florian-lefebvre/astro-typed-ids",
-	"publishConfig": {
-		"access": "public"
-	},
+	"type": "module",
 	"sideEffects": false,
 	"exports": {
 		".": {
@@ -33,7 +17,21 @@
 		"dev": "tsup --watch",
 		"build": "tsup"
 	},
-	"type": "module",
+	"keywords": [
+		"astro-integration",
+		"astro-component",
+		"withastro",
+		"astro",
+		"utility"
+	],
+	"author": "florian-lefebvre",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/florian-lefebvre/astro-typed-ids.git"
+	},
+	"bugs": "https://github.com/florian-lefebvre/astro-typed-ids/issues",
+	"homepage": "https://github.com/florian-lefebvre/astro-typed-ids#readme",
+	"license": "MIT",
 	"peerDependencies": {
 		"astro": "^5.0.0-beta.10"
 	},

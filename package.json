@@ -3,7 +3,7 @@
 	"private": true,
 	"packageManager": "pnpm@10.18.3",
 	"engines": {
-		"node": ">=18.20.8"
+		"node": ">=22.20.0"
 	},
 	"scripts": {
 		"package:dev": "pnpm --filter astro-typed-ids dev",

@@ -5,7 +5,8 @@
 		":disableDependencyDashboard",
 		":disablePeerDependencies",
 		"schedule:weekly",
-		"helpers:pinGitHubActionDigestsToSemver"
+		"helpers:pinGitHubActionDigestsToSemver",
+		"group:allNonMajor"
 	],
 	"rangeStrategy": "bump",
 	"ignorePaths": ["**/node_modules/**"],

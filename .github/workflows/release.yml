@@ -15,19 +15,19 @@ jobs:
       pull-requests: write
       id-token: write
     steps:
-      - uses: actions/checkout
+      - uses: actions/checkout # v5.0.0
         with:
           # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
           fetch-depth: 0
           persist-credentials: false
-      - uses: pnpm/action-setup
-      - uses: actions/setup-node
+      - uses: pnpm/action-setup # v4.2.0
+      - uses: actions/setup-node # v6.0.0
         with:
           node-version: 24.10.0
           cache: 'pnpm'
       - run: pnpm install
       - name: Create Release Pull Request
-        uses: changesets/action
+        uses: changesets/action # v1.5.3
         with:
           version: pnpm ci-version
           publish: pnpm ci-publish

@@ -5,7 +5,7 @@ import type {
 	AstroIntegrationLogger,
 } from "astro";
 import { MutableDataStore } from "../node_modules/astro/dist/content/mutable-data-store.js";
-import { name } from "../package.json";
+import packageJson from "../package.json";
 
 interface Options {
 	/** An array of `astro:content` collection names */
@@ -83,7 +83,7 @@ export default function integration({
 	let utils: Utils;
 
 	return {
-		name,
+		name: packageJson.name,
 		hooks: {
 			"astro:config:setup": ({ command, logger }) => {
 				utils = createUtils({

@@ -1,5 +1,11 @@
 # astro-typed-ids
 
+## 0.1.4
+
+### Patch Changes
+
+- [#23](https://github.com/florian-lefebvre/astro-typed-ids/pull/23) [`8f2f07f`](https://github.com/florian-lefebvre/astro-typed-ids/commit/8f2f07fc5541ba7c559826709ef40631f83886d7) Thanks [@renovate](https://github.com/apps/renovate)! - Fixes an invalid import
+
 ## 0.1.3
 
 ### Patch Changes

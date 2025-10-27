@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493
+      - uses: actions/checkout
         with:
           persist-credentials: false
-      - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061
-      - uses: actions/setup-node@dda4788290998366da86b6a4f497909644397bb2
+      - uses: pnpm/action-setup
+      - uses: actions/setup-node
         with:
           node-version: 24.10.0
           cache: pnpm
